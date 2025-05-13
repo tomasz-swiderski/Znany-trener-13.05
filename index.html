@@ -50,107 +50,221 @@
         </picture>
         <div class="hero-bg-mask"></div>
     </div>
-    <div class="container hero-content-wrapper">
-        <div class="hero-flex-row">
-            <div class="hero-content">
-                <h1 class="hero-title">Twój Personalny Trener Biegania AI Jest Już Blisko!</h1>
-                <div class="countdown-timer-group">
-  <div class="cd-col">
-    <span class="cd-label">dni</span>
-    <span class="cd-box" id="cd-days">00</span>
-  </div>
-  <span class="cd-sep">:</span>
-  <div class="cd-col">
-    <span class="cd-label">godzin</span>
-    <span class="cd-box" id="cd-hours">00</span>
-  </div>
-  <span class="cd-sep">:</span>
-  <div class="cd-col">
-    <span class="cd-label">minut</span>
-    <span class="cd-box" id="cd-minutes">00</span>
-  </div>
-</div>
-                <p class="hero-subtitle">Zapisz się na listę oczekujących i odbierz darmowy, personalizowany plan treningowy AI przy starcie ZnanyTrener.AI</p>
-                <div class="hero-cta">
-                    <a href="#zapisz-sie" class="cta-button primary">Zapisz się na listę</a>
+    <div class="container">
+        <div class="hero-unified-container">
+            <div class="hero-badge">Premiera wkrótce</div>
+            
+            <div class="hero-content-block">
+                <div class="hero-header">
+                    <h1 class="hero-title">Twój Personalny Trener Biegania AI</h1>
+                    <p class="hero-subtitle">Zrewolucjonizuj swoje treningi z pierwszym w Polsce AI, które tworzy plany biegowe dopasowane do Twoich możliwości i celów</p>
+                </div>
+                
+                <div class="hero-countdown-block">
+                    <div class="countdown-label">
+                        <i class="fas fa-stopwatch"></i>
+                        <span>Do startu pozostało:</span>
+                    </div>
+                    <div class="countdown-timer-group">
+                        <div class="cd-col">
+                            <span class="cd-box" id="cd-days">00</span>
+                            <span class="cd-label">dni</span>
+                        </div>
+                        <span class="cd-sep">:</span>
+                        <div class="cd-col">
+                            <span class="cd-box" id="cd-hours">00</span>
+                            <span class="cd-label">godzin</span>
+                        </div>
+                        <span class="cd-sep">:</span>
+                        <div class="cd-col">
+                            <span class="cd-box" id="cd-minutes">00</span>
+                            <span class="cd-label">minut</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-form-block" id="zapisz-sie">
+                    <div class="form-header">
+                        <h3 class="form-title">Dołącz do listy oczekujących</h3>
+                        <p class="form-subtitle">Zapisz się i odbierz <span class="highlight">darmowy, personalizowany plan treningowy</span> przy starcie</p>
+                    </div>
+                    
+                    <form class="signup-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="input-icon-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" name="name" placeholder="Imię (opcjonalnie)" class="form-input">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-icon-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" name="email" placeholder="Twój adres e-mail" required class="form-input">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu zapisania mnie na listę oczekujących oraz otrzymywania informacji marketingowych.</label>
+                        </div>
+                        
+                        <button type="submit" class="cta-button primary form-submit">
+                            <i class="fas fa-paper-plane"></i> Zapisz się i odbierz darmowy plan
+                        </button>
+                    </form>
+                    
+                    <div class="form-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Pierwszeństwo dostępu</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Darmowy plan treningowy</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Specjalna oferta startowa</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="signup-form-container" id="zapisz-sie">
-                <form class="signup-form">
-
-                    <h3 class="form-title">Dołącz do listy oczekujących</h3>
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Imię (opcjonalnie)" class="form-input">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Twój adres e-mail" required class="form-input">
-                    </div>
-                    <div class="form-group checkbox">
-                        <input type="checkbox" id="consent" name="consent" required>
-                        <label for="consent">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu zapisania mnie na listę oczekujących oraz otrzymywania informacji marketingowych.</label>
-                    </div>
-                    <button type="submit" class="cta-button primary form-submit">Zapisz się i odbierz darmowy plan</button>
-                </form>
-            </div>
+        </div>
+    </div>
         </section>
 
-        <!-- Sekcja 2: Problem & Rozwiązanie -->
+        <!-- Sekcja 2: Wyzwania i Rozwiązania -->
         <section id="problem-solution-section" class="problem-solution-section">
             <div class="container">
-                <div class="problem-container">
-                    <h2 class="section-title">Wyzwania biegaczy</h2>
-                    <div class="problems-grid">
-                        <div class="problem-card animate-on-scroll">
-                            <div class="problem-icon-wrapper">
-                                <div class="problem-icon pulse-effect">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                                    </svg>
+                <!-- Wyzwania Biegaczy -->
+                <div class="section-header">
+                    <span class="section-badge">Wyzwania</span>
+                    <h2 class="section-title">Z czym zmagają się biegacze?</h2>
+                    <p class="section-intro">Poznaj najczęstsze problemy, które spowalniają rozwój biegaczy na każdym poziomie zaawansowania</p>
+                </div>
+                
+                <div class="challenges-container">
+                    <div class="challenges-grid">
+                        <div class="challenge-card" data-aos="fade-up">
+                            <div class="challenge-icon-container">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="challenge-connector"></div>
+                            </div>
+                            <div class="challenge-content">
+                                <h3 class="challenge-title">Stagnacja wyników</h3>
+                                <p class="challenge-description">Brak postępów mimo regularnych treningów i trudności w przełamaniu bariery rozwoju.</p>
+                                <div class="challenge-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">67%</span>
+                                        <span class="stat-label">biegaczy</span>
+                                    </div>
                                 </div>
                             </div>
-                            <h3 class="problem-title">Stagnacja wyników</h3>
-                            <p class="problem-description">Brak postępów mimo regularnych treningów i brak wiedzy jak przełamać barierę rozwoju.</p>
-                            <div class="card-indicator"></div>
                         </div>
-                        <div class="problem-card animate-on-scroll delay-1">
-                            <div class="problem-icon-wrapper">
-                                <div class="problem-icon pulse-effect">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
+                        
+                        <div class="challenge-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="challenge-icon-container">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <div class="challenge-connector"></div>
+                            </div>
+                            <div class="challenge-content">
+                                <h3 class="challenge-title">Kontuzje i przeciążenia</h3>
+                                <p class="challenge-description">Nawracające urazy wynikające z nieodpowiedniego obciążenia lub błędów w technice biegu.</p>
+                                <div class="challenge-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">78%</span>
+                                        <span class="stat-label">biegaczy</span>
+                                    </div>
                                 </div>
                             </div>
-                            <h3 class="problem-title">Kontuzje</h3>
-                            <p class="problem-description">Nawracające urazy wynikające z nieodpowiedniego obciążenia lub techniki biegu.</p>
-                            <div class="card-indicator"></div>
                         </div>
-                        <div class="problem-card animate-on-scroll delay-2">
-                            <div class="problem-icon-wrapper">
-                                <div class="problem-icon pulse-effect">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                    </svg>
+                        
+                        <div class="challenge-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="challenge-icon-container">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="challenge-connector"></div>
+                            </div>
+                            <div class="challenge-content">
+                                <h3 class="challenge-title">Brak personalizacji</h3>
+                                <p class="challenge-description">Trudności w znalezieniu wiarygodnych, spersonalizowanych porad treningowych dopasowanych do indywidualnych potrzeb.</p>
+                                <div class="challenge-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">83%</span>
+                                        <span class="stat-label">biegaczy</span>
+                                    </div>
                                 </div>
                             </div>
-                            <h3 class="problem-title">Brak wiedzy</h3>
-                            <p class="problem-description">Trudności w znalezieniu wiarygodnych, spersonalizowanych porad treningowych.</p>
-                            <div class="card-indicator"></div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Rozwiązanie -->
                 <div class="solution-container">
-                    <h2 class="section-title">ZnanyTrener.AI - Twoje rozwiązanie</h2>
-                    <div class="solution-content">
-                        <div class="solution-image">
-                            <img src="images/Chceaktywnie.png" alt="ZnanyTrener.AI w akcji" class="solution-img">
+                    <div class="section-header solution-header">
+                        <span class="section-badge solution-badge">Rozwiązanie</span>
+                        <h2 class="section-title">ZnanyTrener.AI - Twój osobisty trener</h2>
+                        <p class="section-intro">Inteligentny system, który analizuje Twoje możliwości i tworzy spersonalizowany plan treningowy</p>
+                    </div>
+                    
+                    <div class="solution-showcase">
+                        <div class="solution-visual" data-aos="fade-right">
+                            <div class="solution-image-container">
+                                <img src="images/Chceaktywnie.png" alt="ZnanyTrener.AI w akcji" class="solution-img">
+                                <div class="solution-image-overlay">
+                                    <div class="solution-badge-container">
+                                        <span class="solution-badge-item"><i class="fas fa-brain"></i> AI</span>
+                                        <span class="solution-badge-item"><i class="fas fa-shield-alt"></i> Bezpieczne</span>
+                                        <span class="solution-badge-item"><i class="fas fa-tachometer-alt"></i> Efektywne</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="solution-text">
-                            <p>ZnanyTrener.AI to inteligentny system, który analizuje Twoje możliwości, cele i historię treningową, aby stworzyć całkowicie spersonalizowany plan treningowy.</p>
-                            <p>Dzięki zaawansowanym algorytmom AI, każdy plan jest dostosowany do Twoich indywidualnych potrzeb, uwzględniając Twój poziom zaawansowania, historię kontuzji i cele biegowe.</p>
-                            <a href="#zapisz-sie" class="cta-button secondary">Dołącz do listy oczekujących</a>
+                        
+                        <div class="solution-details" data-aos="fade-left">
+                            <div class="solution-features">
+                                <div class="solution-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-fingerprint"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Pełna personalizacja</h4>
+                                        <p>Analiza Twoich możliwości, celów i historii treningowej, aby stworzyć całkowicie spersonalizowany plan.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="solution-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Bezpieczny rozwój</h4>
+                                        <p>Uwzględniamy Twój poziom zaawansowania i historię kontuzji, aby zapewnić bezpieczny progres.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="solution-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Dynamiczna adaptacja</h4>
+                                        <p>Plan dostosowuje się do Twoich postępów i zmian w Twoim harmonogramie treningowym.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-cta">
+                                <a href="#plany" class="cta-button primary"><i class="fas fa-running"></i> Zobacz plany</a>
+                                <a href="#zapisz-sie" class="cta-button secondary"><i class="fas fa-user-plus"></i> Dołącz do listy oczekujących</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,26 +275,71 @@
         <section id="how-it-works-section" class="how-it-works-section">
             <div class="container">
                 <h2 class="section-title">Jak działa ZnanyTrener.AI?</h2>
-                <div class="steps-container">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <div class="step-icon"><i class="fas fa-user-edit"></i></div>
-                        <h3 class="step-title">Mówisz nam o sobie</h3>
-                        <p class="step-description">Wypełniasz krótki kwestionariusz o swoich celach, historii treningowej i ewentualnych kontuzjach.</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <div class="step-icon"><i class="fas fa-brain"></i></div>
-                        <h3 class="step-title">AI analizuje dane</h3>
-                        <p class="step-description">Nasz zaawansowany algorytm analizuje Twoje dane i tworzy optymalny plan treningowy.</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <div class="step-icon"><i class="fas fa-file-alt"></i></div>
-                        <h3 class="step-title">Otrzymujesz plan</h3>
-                        <p class="step-description">Dostajesz spersonalizowany plan treningowy, który możesz od razu wdrożyć w życie.</p>
+                <div class="process-flow">
+                    <div class="process-line"></div>
+                    <div class="steps-container">
+                        <div class="step-card animate-step">
+                            <div class="step-header">
+                                <div class="step-number">1</div>
+                                <div class="step-icon pulse-icon">
+                                    <i class="fas fa-user-edit"></i>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <h3 class="step-title">Mówisz nam o sobie</h3>
+                                <p class="step-description">Wypełniasz interaktywny kwestionariusz o swoich celach, historii treningowej i ewentualnych kontuzjach.</p>
+                                <div class="step-features">
+                                    <span class="feature-tag"><i class="fas fa-check-circle"></i> Szybko</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle"></i> Łatwo</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step-card animate-step delay-1">
+                            <div class="step-header">
+                                <div class="step-number">2</div>
+                                <div class="step-icon pulse-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <h3 class="step-title">AI analizuje dane</h3>
+                                <p class="step-description">Nasz zaawansowany algorytm analizuje Twoje dane i tworzy optymalny plan treningowy dostosowany do Twoich możliwości.</p>
+                                <div class="step-features">
+                                    <span class="feature-tag"><i class="fas fa-bolt"></i> Błyskawicznie</span>
+                                    <span class="feature-tag"><i class="fas fa-chart-line"></i> Precyzyjnie</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step-card animate-step delay-2">
+                            <div class="step-header">
+                                <div class="step-number">3</div>
+                                <div class="step-icon pulse-icon">
+                                    <i class="fas fa-running"></i>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <h3 class="step-title">Otrzymujesz plan</h3>
+                                <p class="step-description">Dostajesz spersonalizowany plan treningowy, który możesz od razu wdrożyć w życie i śledzić swoje postępy.</p>
+                                <div class="step-features">
+                                    <span class="feature-tag"><i class="fas fa-mobile-alt"></i> Dostępny mobilnie</span>
+                                    <span class="feature-tag"><i class="fas fa-sync-alt"></i> Aktualizowany</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="process-cta">
+                    <a href="#plany" class="cta-button primary"><i class="fas fa-angle-double-down"></i> Zobacz plany</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sekcja: Oferta Specjalna -->
+        <section id="special-offer" class="special-offer-section">
+            <div class="container">
                 <div class="early-access-info">
                     <div class="early-access-badge">Oferta specjalna</div>
                     <h3 class="early-access-title">Zapisz się na listę oczekujących i odbierz darmowy plan</h3>
@@ -323,20 +482,81 @@
             </div>
         </section>
 
-        <!-- Sekcja 6: Budowanie Zaufania / Wskazanie na Przyszłość -->
-        <section id="trust-future-section" class="trust-future-section">
+        <!-- Sekcja 6: Integracje i Przyszłość -->
+        <section id="integrations-section" class="integrations-section">
             <div class="container">
-                <h2 class="section-title">Przyszłe integracje</h2>
-                <p class="integration-description">W przyszłości planujemy integrację z popularnymi platformami do śledzenia aktywności, co pozwoli na jeszcze lepszą personalizację planów treningowych.</p>
-                <div class="integration-logos">
-                    <div class="logo-item"><img src="images/strava-logo-placeholder.png" alt="Strava" class="partner-logo"></div>
-                    <div class="logo-item"><img src="images/garmin-logo-placeholder.png" alt="Garmin" class="partner-logo"></div>
-                    <div class="logo-item"><img src="images/trainingpeaks-logo-placeholder.png" alt="TrainingPeaks" class="partner-logo"></div>
+                <div class="section-header">
+                    <span class="section-badge integration-badge">Coming Soon</span>
+                    <h2 class="section-title">Integracje, które zmienią Twój trening</h2>
+                    <p class="section-intro">Połączymy Twoje ulubione platformy do śledzenia aktywności z ZnanyTrener.AI, aby zapewnić jeszcze lepsze doświadczenia treningowe</p>
                 </div>
-                <div class="testimonials">
-                    <div class="testimonial-card">
+                
+                <div class="watch-integration-showcase">
+                    <div class="watch-container">
+                        <div class="watch-wrapper">
+                            <img src="images/Zegarek.png" alt="Zegarek sportowy" class="watch-image">
+                            <div class="watch-overlay"></div>
+                        </div>
+                        
+                        <div class="logos-static">
+                            <div class="logo-static-item logo-top" data-aos="fade-down" data-aos-delay="100">
+                                <div class="logo-static-wrapper">
+                                    <img src="images/garmin-logo-vector.png" alt="Garmin" class="static-logo">
+                                </div>
+                            </div>
+                            <div class="logo-static-item logo-right" data-aos="fade-left" data-aos-delay="200">
+                                <div class="logo-static-wrapper">
+                                    <img src="images/strava-logo-png-4.webp" alt="Strava" class="static-logo">
+                                </div>
+                            </div>
+                            <div class="logo-static-item logo-bottom" data-aos="fade-up" data-aos-delay="300">
+                                <div class="logo-static-wrapper">
+                                    <img src="images/Training-Peaks-Logo.webp" alt="Training Peaks" class="static-logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="integration-features">
+                        <div class="integration-feature" data-aos="fade-left" data-aos-delay="100">
+                            <div class="feature-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Synchronizacja danych</h4>
+                                <p>Automatyczne pobieranie danych treningowych z Twoich ulubionych platform i urządzeń.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="integration-feature" data-aos="fade-left" data-aos-delay="200">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Analiza postępów</h4>
+                                <p>Zaawansowana analiza Twoich wyników i dynamiczne dostosowywanie planu treningowego.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="integration-feature" data-aos="fade-left" data-aos-delay="300">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Dostęp mobilny</h4>
+                                <p>Pełna integracja z aplikacjami mobilnymi, zegarkami i innymi urządzeniami sportowymi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-section">
+                    <div class="testimonial-card" data-aos="fade-up">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="testimonial-content">
-                            <p>"Jako biegacz z kilkuletnim doświadczeniem, zawsze szukałem sposobu na przełamanie bariery wyników. Nie mogę się doczekać, aby wypróbować ZnanyTrener.AI!"</p>
+                            <p>"Jako biegacz z kilkuletnim doświadczeniem, zawsze szukałem sposobu na przełamanie bariery wyników. Nie mogę się doczekać, aby wypróbować ZnanyTrener.AI z integracją z moim Garminem!"</p>
                         </div>
                         <div class="testimonial-author">
                             <img src="images/testimonial-author-placeholder.jpg" alt="Autor opinii" class="author-img">
@@ -346,6 +566,10 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="integration-cta">
+                    <a href="#zapisz-sie" class="cta-button primary"><i class="fas fa-bell"></i> Powiadom mnie o integracji</a>
                 </div>
             </div>
         </section>
@@ -436,5 +660,7 @@
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/countdown.js"></script>
+    <script src="js/aos-init.js"></script>
+    <script src="js/watch-animation.js"></script>
 </body>
 </html>
