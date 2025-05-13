@@ -1,0 +1,207 @@
+/* === Mobile Styles === */
+/* These styles will override the desktop styles for mobile devices */
+
+@media (max-width: 991px) {
+    /* === General === */
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    /* === Navigation === */
+    .desktop-nav {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger-icon {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--dark-color);
+        position: relative;
+        transition: var(--transition);
+    }
+    
+    .hamburger-icon:before,
+    .hamburger-icon:after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: var(--dark-color);
+        transition: var(--transition);
+    }
+    
+    .hamburger-icon:before {
+        top: -8px;
+    }
+    
+    .hamburger-icon:after {
+        bottom: -8px;
+    }
+    
+    .mobile-menu-toggle.active .hamburger-icon {
+        background-color: transparent;
+    }
+    
+    .mobile-menu-toggle.active .hamburger-icon:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    .mobile-menu-toggle.active .hamburger-icon:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    
+    .mobile-nav {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+    
+    .mobile-nav.active {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .mobile-nav a {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .mobile-nav .cta-button {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* === Hero Section === */
+    .hero-section {
+        padding-top: 100px;
+        text-align: center;
+    }
+    
+    .hero-section .container {
+        flex-direction: column;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-image {
+        margin-top: 30px;
+    }
+    
+    .signup-form-container {
+        margin-top: 40px;
+        padding: 20px;
+    }
+    
+    /* === Problem & Solution Section === */
+    .problems-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .solution-content {
+        flex-direction: column;
+    }
+    
+    .solution-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    /* === How It Works Section === */
+    .steps-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .step-card {
+        max-width: 100%;
+    }
+    
+    .early-access-info {
+        padding: 30px 20px;
+    }
+    
+    /* === Benefits Section === */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* === Trust/Future Section === */
+    .integration-logos {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    /* === Footer === */
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* === General === */
+    section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* === Hero Section === */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* === Offer CTA Section === */
+    .offer-title {
+        font-size: 1.8rem;
+    }
+    
+    .offer-description {
+        font-size: 1rem;
+    }
+    
+    /* === FAQ Section === */
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+}
