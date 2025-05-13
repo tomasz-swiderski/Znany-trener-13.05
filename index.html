@@ -7,6 +7,9 @@
     <meta name="description" content="Zapisz się na listę oczekujących i odbierz darmowy, personalizowany plan treningowy AI przy starcie ZnanyTrener.AI – Twój inteligentny partner na biegowej ścieżce.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-mobile.css">
+    <link rel="stylesheet" href="css/solution-styles.css">
+    <link rel="stylesheet" href="css/form-styles.css">
+    <link rel="stylesheet" href="css/how-it-works-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -51,16 +54,14 @@
         <div class="hero-bg-mask"></div>
     </div>
     <div class="container">
-        <div class="hero-unified-container">
+        <div class="hero-box">
             <div class="hero-badge">Premiera wkrótce</div>
             
-            <div class="hero-content-block">
-                <div class="hero-header">
-                    <h1 class="hero-title">Twój Personalny Trener Biegania AI</h1>
-                    <p class="hero-subtitle">Zrewolucjonizuj swoje treningi z pierwszym w Polsce AI, które tworzy plany biegowe dopasowane do Twoich możliwości i celów</p>
-                </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Twój Personalny Trener Biegania AI</h1>
+                <p class="hero-subtitle">Zrewolucjonizuj swoje treningi z pierwszym w Polsce AI, które tworzy plany biegowe dopasowane do Twoich możliwości i celów</p>
                 
-                <div class="hero-countdown-block">
+                <div class="countdown-container">
                     <div class="countdown-label">
                         <i class="fas fa-stopwatch"></i>
                         <span>Do startu pozostało:</span>
@@ -82,58 +83,58 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="signup-box" id="zapisz-sie">
+                <div class="form-header">
+                    <h3 class="form-title">Dołącz do listy oczekujących</h3>
+                    <p class="form-subtitle">Zapisz się i odbierz <span class="highlight">darmowy, personalizowany plan treningowy</span> przy starcie</p>
+                </div>
                 
-                <div class="hero-form-block" id="zapisz-sie">
-                    <div class="form-header">
-                        <h3 class="form-title">Dołącz do listy oczekujących</h3>
-                        <p class="form-subtitle">Zapisz się i odbierz <span class="highlight">darmowy, personalizowany plan treningowy</span> przy starcie</p>
+                <form class="signup-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="input-icon-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" name="name" placeholder="Imię (opcjonalnie)" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-icon-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" name="email" placeholder="Twój adres e-mail" required class="form-input">
+                            </div>
+                        </div>
                     </div>
                     
-                    <form class="signup-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <div class="input-icon-wrapper">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" name="name" placeholder="Imię (opcjonalnie)" class="form-input">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-icon-wrapper">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" name="email" placeholder="Twój adres e-mail" required class="form-input">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="consent" name="consent" required>
-                            <label for="consent">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu zapisania mnie na listę oczekujących oraz otrzymywania informacji marketingowych.</label>
-                        </div>
-                        
-                        <button type="submit" class="cta-button primary form-submit">
-                            <i class="fas fa-paper-plane"></i> Zapisz się i odbierz darmowy plan
-                        </button>
-                    </form>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu zapisania mnie na listę oczekujących oraz otrzymywania informacji marketingowych.</label>
+                    </div>
                     
-                    <div class="form-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Pierwszeństwo dostępu</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Darmowy plan treningowy</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Specjalna oferta startowa</span>
-                        </div>
+                    <button type="submit" class="cta-button primary form-submit">
+                        <i class="fas fa-paper-plane"></i> Zapisz się i odbierz darmowy plan
+                    </button>
+                </form>
+                
+                <div class="form-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-crown"></i>
+                        <span>Pierwszeństwo dostępu</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-running"></i>
+                        <span>Darmowy plan treningowy</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-gift"></i>
+                        <span>Specjalna oferta startowa</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        </section>
+</section>
 
         <!-- Sekcja 2: Wyzwania i Rozwiązania -->
         <section id="problem-solution-section" class="problem-solution-section">
@@ -208,60 +209,72 @@
                 
                 <!-- Rozwiązanie -->
                 <div class="solution-container">
-                    <div class="section-header solution-header">
+                    <div class="section-header solution-header text-center">
                         <span class="section-badge solution-badge">Rozwiązanie</span>
                         <h2 class="section-title">ZnanyTrener.AI - Twój osobisty trener</h2>
                         <p class="section-intro">Inteligentny system, który analizuje Twoje możliwości i tworzy spersonalizowany plan treningowy</p>
                     </div>
                     
                     <div class="solution-showcase">
-                        <div class="solution-visual" data-aos="fade-right">
+                        <div class="solution-visual" data-aos="fade-up" data-aos-delay="100">
                             <div class="solution-image-container">
                                 <img src="images/Chceaktywnie.png" alt="ZnanyTrener.AI w akcji" class="solution-img">
                                 <div class="solution-image-overlay">
                                     <div class="solution-badge-container">
-                                        <span class="solution-badge-item"><i class="fas fa-brain"></i> AI</span>
-                                        <span class="solution-badge-item"><i class="fas fa-shield-alt"></i> Bezpieczne</span>
-                                        <span class="solution-badge-item"><i class="fas fa-tachometer-alt"></i> Efektywne</span>
+                                        <span class="solution-badge-item animate-pulse"><i class="fas fa-robot"></i> AI</span>
+                                        <span class="solution-badge-item animate-pulse"><i class="fas fa-shield-alt"></i> Bezpieczne</span>
+                                        <span class="solution-badge-item animate-pulse"><i class="fas fa-bolt"></i> Efektywne</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="solution-details" data-aos="fade-left">
+                        <div class="solution-details">
                             <div class="solution-features">
-                                <div class="solution-feature">
+                                <div class="solution-feature" data-aos="fade-up" data-aos-delay="200">
                                     <div class="feature-icon">
                                         <i class="fas fa-fingerprint"></i>
                                     </div>
                                     <div class="feature-content">
                                         <h4>Pełna personalizacja</h4>
                                         <p>Analiza Twoich możliwości, celów i historii treningowej, aby stworzyć całkowicie spersonalizowany plan.</p>
+                                        <div class="feature-benefits">
+                                            <span class="benefit-tag"><i class="fas fa-check-circle"></i> Dopasowane tempo</span>
+                                            <span class="benefit-tag"><i class="fas fa-check-circle"></i> Indywidualne cele</span>
+                                        </div>
                                     </div>
                                 </div>
                                 
-                                <div class="solution-feature">
+                                <div class="solution-feature" data-aos="fade-up" data-aos-delay="300">
                                     <div class="feature-icon">
-                                        <i class="fas fa-shield-alt"></i>
+                                        <i class="fas fa-heartbeat"></i>
                                     </div>
                                     <div class="feature-content">
                                         <h4>Bezpieczny rozwój</h4>
                                         <p>Uwzględniamy Twój poziom zaawansowania i historię kontuzji, aby zapewnić bezpieczny progres.</p>
+                                        <div class="feature-benefits">
+                                            <span class="benefit-tag"><i class="fas fa-check-circle"></i> Profilaktyka kontuzji</span>
+                                            <span class="benefit-tag"><i class="fas fa-check-circle"></i> Stopniowy progres</span>
+                                        </div>
                                     </div>
                                 </div>
                                 
-                                <div class="solution-feature">
+                                <div class="solution-feature" data-aos="fade-up" data-aos-delay="400">
                                     <div class="feature-icon">
-                                        <i class="fas fa-sync-alt"></i>
+                                        <i class="fas fa-chart-line"></i>
                                     </div>
                                     <div class="feature-content">
                                         <h4>Dynamiczna adaptacja</h4>
                                         <p>Plan dostosowuje się do Twoich postępów i zmian w Twoim harmonogramie treningowym.</p>
+                                        <div class="feature-benefits">
+                                            <span class="benefit-tag"><i class="fas fa-check-circle"></i> Ciągła optymalizacja</span>
+                                            <span class="benefit-tag"><i class="fas fa-check-circle"></i> Elastyczny harmonogram</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="solution-cta">
+                            <div class="solution-cta" data-aos="fade-up" data-aos-delay="500">
                                 <a href="#plany" class="cta-button primary"><i class="fas fa-running"></i> Zobacz plany</a>
                                 <a href="#zapisz-sie" class="cta-button secondary"><i class="fas fa-user-plus"></i> Dołącz do listy oczekujących</a>
                             </div>
@@ -661,6 +674,8 @@
     <script src="js/animations.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/aos-init.js"></script>
-    <script src="js/watch-animation.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/solution-animations.js"></script>
+    <script src="js/how-it-works-animations.js"></script>
 </body>
 </html>
