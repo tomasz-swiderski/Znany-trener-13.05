@@ -38,20 +38,26 @@
     <main>
         <!-- Sekcja 1: Hero Section -->
         <section id="hero-section" class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Twój Personalny Trener Biegania AI Jest Już Blisko!</h1>
-                    <p class="hero-subtitle">Zapisz się na listę oczekujących i odbierz darmowy, personalizowany plan treningowy AI przy starcie ZnanyTrener.AI</p>
-                    <div class="hero-cta">
-                        <a href="#zapisz-sie" class="cta-button primary">Zapisz się na listę</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="images/hero-placeholder.jpg" alt="Biegacz z ZnanyTrener.AI" class="hero-img">
+    <div class="hero-bg">
+        <picture>
+            <source srcset="images/hero.png" media="(min-width: 769px)">
+            <!-- <source srcset="images/hero-mobile.png" media="(max-width: 768px)"> -->
+            <img src="images/hero.png" alt="Biegacz z ZnanyTrener.AI" class="hero-bg-img">
+        </picture>
+        <div class="hero-bg-mask"></div>
+    </div>
+    <div class="container hero-content-wrapper">
+        <div class="hero-flex-row">
+            <div class="hero-content">
+                <h1 class="hero-title">Twój Personalny Trener Biegania AI Jest Już Blisko!</h1>
+                <p class="hero-subtitle">Zapisz się na listę oczekujących i odbierz darmowy, personalizowany plan treningowy AI przy starcie ZnanyTrener.AI</p>
+                <div class="hero-cta">
+                    <a href="#zapisz-sie" class="cta-button primary">Zapisz się na listę</a>
                 </div>
             </div>
             <div class="signup-form-container" id="zapisz-sie">
                 <form class="signup-form">
+
                     <h3 class="form-title">Dołącz do listy oczekujących</h3>
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Imię (opcjonalnie)" class="form-input">
