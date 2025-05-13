@@ -385,10 +385,12 @@ header {
 
 /* === Problem & Solution Section === */
 .problem-solution-section {
-    background-color: #f9f9f9;
+    padding: 80px 0;
+    background-color: var(--light-bg-color);
 }
 
-.problem-container, .solution-container {
+.problem-container,
+.solution-container {
     margin-bottom: 60px;
 }
 
@@ -396,30 +398,133 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: 40px;
 }
 
 .problem-card {
     background-color: white;
     border-radius: var(--border-radius);
-    padding: 30px;
-    box-shadow: var(--box-shadow);
+    padding: 30px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     text-align: center;
-    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-image-slice: 1;
 }
 
 .problem-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
-.problem-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+.problem-icon-wrapper {
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
+.problem-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.problem-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: white;
+}
+
+.pulse-effect {
+    position: relative;
+}
+
+.pulse-effect:before, .pulse-effect:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(var(--primary-color-rgb), 0.4);
+    z-index: -1;
+    opacity: 0;
+    animation: pulse 2s infinite;
+}
+
+.pulse-effect:after {
+    animation-delay: 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
 .problem-title {
+    font-size: 1.4rem;
     margin-bottom: 15px;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.problem-description {
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.card-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    transition: width 0.3s ease;
+}
+
+.problem-card:hover .card-indicator {
+    width: 100%;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.delay-2 {
+    transition-delay: 0.4s;
 }
 
 .solution-content {
