@@ -145,6 +145,7 @@
     align-items: center;
     cursor: pointer;
     position: relative;
+    flex-wrap: nowrap;
 }
 
 .faq-question h3 {
@@ -155,6 +156,8 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    flex: 1;
+    padding-right: 40px;
 }
 
 .faq-icon {
@@ -167,6 +170,8 @@
     justify-content: center;
     color: white;
     font-size: 1.2rem;
+    margin-right: 15px;
+    margin-left: 5px;
 }
 
 /* Different colors for each icon */

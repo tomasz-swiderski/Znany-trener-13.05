@@ -71,11 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Automatycznie otwórz pierwsze pytanie przy ładowaniu strony
-    const firstFaqItem = document.querySelector('.faq-item');
-    if (firstFaqItem) {
-        setTimeout(() => {
-            firstFaqItem.classList.add('active');
-        }, 500);
-    }
+    // Automatyczne otwieranie pierwszego pytania wyłączone
+    // const firstFaqItem = document.querySelector('.faq-item');
+    // if (firstFaqItem) {
+    //     setTimeout(() => {
+    //         firstFaqItem.classList.add('active');
+    //     }, 500);
+    // }
 });
