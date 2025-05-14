@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/social-icons-fixes.css">
     <link rel="stylesheet" href="css/testimonial-fixes.css">
     <link rel="stylesheet" href="css/modal-styles.css">
+    <link rel="stylesheet" href="css/ai-generation-styles.css">
+    <link rel="stylesheet" href="css/ai-process-visualization.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -488,7 +490,158 @@
             </div>
         </section>
 
-        <!-- Sekcja 5: Plany -->
+        <!-- Sekcja 5: Jak generowane są plany AI -->
+        <section id="ai-plan-generation" class="ai-generation-section">
+            <div class="video-background">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/Film bieg.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="section-header" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h2 class="section-title">Jak generowane są plany AI</h2>
+                    <p class="section-subtitle">Poznaj proces tworzenia personalizowanych planów treningowych</p>
+                </div>
+                
+                <div class="ai-generation-content">
+                    <div class="ai-process-intro">
+                        <p>Twój plan treningowy to nie standardowy szablon - to <strong>precyzyjnie dopasowany program</strong> uwzględniający Twoje indywidualne potrzeby. Każdy plan tworzymy tak, by był maksymalnie efektywny i jednocześnie bezpieczny.</p>
+                    </div>
+                    
+                    <!-- Interaktywna wizualizacja procesu AI -->
+                    <div class="ai-process-visualization">
+                        <!-- Ścieżka biegowa symbolizująca przepływ danych -->
+                        <div class="process-path">
+                            <!-- Węzły na ścieżce -->
+                            <div class="process-node node-1"></div>
+                            <div class="process-node node-2"></div>
+                            <div class="process-node node-3"></div>
+                            <div class="process-node node-4"></div>
+                            
+                            <!-- Animowane kropki danych -->
+                            <div class="data-dot dot-1"></div>
+                            <div class="data-dot dot-2"></div>
+                            <div class="data-dot dot-3"></div>
+                            <div class="data-dot dot-4"></div>
+                        </div>
+                        
+                        <!-- Etapy procesu z wizualizacjami -->
+                        <div class="process-stages">
+                            <!-- Etap 1: Dane użytkownika -->
+                            <div class="process-stage">
+                                <div class="stage-icon-container">
+                                    <div class="stage-icon">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <div class="stage-icon-pulse"></div>
+                                    
+                                    <!-- Orbita danych wokół ikony użytkownika -->
+                                    <div class="data-point data-level" style="top: 15%; left: 50%;">
+                                        <i class="fas fa-running"></i>
+                                    </div>
+                                    <div class="data-point data-goal" style="top: 50%; left: 85%;">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="data-point data-time" style="top: 85%; left: 50%;">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="data-point data-health" style="top: 50%; left: 15%;">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                </div>
+                                <h3 class="stage-title">Wszystko zaczyna się od Ciebie</h3>
+                                <p class="stage-description">Podstawą każdego planu są <strong>Twoje indywidualne informacje</strong>, które wprowadzasz do systemu. To fundament, na którym budujemy Twój trening.</p>
+                            </div>
+                            
+                            <!-- Etap 2: Analiza AI -->
+                            <div class="process-stage">
+                                <div class="stage-icon-container">
+                                    <div class="stage-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="stage-icon-pulse"></div>
+                                    <div class="ai-brain"><!-- Dynamicznie generowane przez JS --></div>
+                                </div>
+                                <h3 class="stage-title">Inteligentna analiza AI</h3>
+                                <p class="stage-description">Sztuczna inteligencja działa jak doświadczony trener, analizując Twoje dane w oparciu o zasady fizjologii wysiłku, metodyki treningu biegowego i progresji obciążeń.</p>
+                            </div>
+                            
+                            <!-- Etap 3: Spersonalizowany plan -->
+                            <div class="process-stage">
+                                <div class="stage-icon-container">
+                                    <div class="stage-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="stage-icon-pulse"></div>
+                                    <div class="training-plan"><!-- Dynamicznie generowane przez JS --></div>
+                                </div>
+                                <h3 class="stage-title">Twój plan skrojony na miarę</h3>
+                                <p class="stage-description">Efektem pracy AI jest <strong>całkowicie spersonalizowany plan treningowy</strong>, który uwzględnia Twoją formę, cele, dostępność czasową oraz minimalizuje ryzyko kontuzji.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Szczegółowe informacje o procesie -->
+                    <div class="ai-generation-details">
+                        <div class="ai-step">
+                            <div class="ai-step-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="ai-step-content">
+                                <h3>Analiza kluczowych danych</h3>
+                                <p>Nasz system uwzględnia wszystkie najważniejsze czynniki:</p>
+                                <ul class="ai-data-points">
+                                    <li><i class="fas fa-running"></i> <strong>Poziom zaawansowania</strong> - czy dopiero zaczynasz czy jesteś już doświadczonym biegaczem</li>
+                                    <li><i class="fas fa-trophy"></i> <strong>Cele biegowe</strong> - ukończenie pierwszego 5k, nowy rekord życiowy na 10k czy przygotowanie do maratonu</li>
+                                    <li><i class="fas fa-calendar-alt"></i> <strong>Dostępność czasowa</strong> - liczba treningów, które jesteś w stanie zrealizować tygodniowo</li>
+                                    <li><i class="fas fa-heartbeat"></i> <strong>Historia kontuzji</strong> - istniejące dolegliwości i przeciążenia, które wymagają specjalnego podejścia</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="ai-step">
+                            <div class="ai-step-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="ai-step-content">
+                                <h3>Technologia za planem</h3>
+                                <p>AI przetwarza dane w oparciu o:</p>
+                                <ul class="ai-analysis-points">
+                                    <li>Zasady fizjologii wysiłku i metodyki treningu biegowego</li>
+                                    <li>Wiedzę o progresji obciążeń i periodyzacji treningu</li>
+                                    <li>Doświadczenie w pracy z biegaczami o różnym poziomie</li>
+                                    <li>Najnowsze badania w dziedzinie sportu i regeneracji</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="ai-step">
+                            <div class="ai-step-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="ai-step-content">
+                                <h3>Korzyści spersonalizowanego planu</h3>
+                                <p>Twój plan AI:</p>
+                                <ul class="ai-benefits-points">
+                                    <li>Jest dostosowany do Twojej aktualnej formy i celów</li>
+                                    <li>Uwzględnia Twoją dostępność czasową i preferencje</li>
+                                    <li>Minimalizuje ryzyko kontuzji i przetrenowania</li>
+                                    <li>Zapewnia optymalną progresję, by systematycznie poprawiać Twoje wyniki</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-generation-cta">
+                        <p>Dzięki personalizacji i zaawansowanej analizie AI, Twój plan treningowy jest nie tylko skuteczny, ale przede wszystkim <strong>bezpieczny</strong> - pozwala osiągać cele przy minimalizacji ryzyka kontuzji.</p>
+                        <a href="#zapisz-sie" class="cta-button primary"><i class="fas fa-rocket"></i> Zapisz się i zdobądź swój plan AI</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja 6: Plany -->
        <section id="plany" class="pricing-section">
             <div class="container">
                 <div style="max-width: 560px; margin: 0 auto; text-align: center;">
@@ -879,5 +1032,7 @@
         //     }, 1000);
         // });
     </script>
+    <!-- Skrypt wizualizacji procesu AI -->
+    <script src="js/ai-process-visualization.js"></script>
 </body>
 </html>
