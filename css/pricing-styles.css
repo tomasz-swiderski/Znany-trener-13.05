@@ -372,6 +372,17 @@
     }
 }
 
+.pricing-section .section-title,
+.pricing-section .section-subtitle {
+    text-align: left !important;
+}
+
+.pricing-section .section-title:after {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 25px !important;
+}
+
 /* AOS animations enhancement */
 [data-aos="fade-up"] {
     transform: translateY(30px);
