@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/benefits-styles.css">
     <link rel="stylesheet" href="css/integration-fixes.css">
     <link rel="stylesheet" href="css/modern-nav.css">
+    <link rel="stylesheet" href="css/faq-simple.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -813,44 +814,95 @@
         <!-- Sekcja 7: FAQ (Najczęściej Zadawane Pytania) -->
         <section id="faq-section" class="faq-section">
             <div class="container">
-                <h2 class="section-title">Najczęściej zadawane pytania</h2>
+                <div class="faq-header">
+                    <span class="faq-badge">Odpowiadamy na Twoje pytania</span>
+                    <h2 class="section-title">Najczęściej zadawane pytania</h2>
+                    <p class="faq-intro">Poznaj odpowiedzi na najczęściej zadawane pytania dotyczące ZnanyTrener.AI i naszych planów treningowych</p>
+                </div>
+                
                 <div class="faq-container">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Kiedy nastąpi oficjalny start ZnanyTrener.AI?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100" id="faq-item-1">
+                        <div class="faq-question" onclick="toggleFaq('faq-item-1')">
+                            <h3><span class="faq-icon"><i class="fas fa-calendar-alt"></i></span> Kiedy nastąpi oficjalny start ZnanyTrener.AI?</h3>
                             <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                         </div>
                         <div class="faq-answer">
                             <p>Planujemy oficjalny start platformy w ciągu najbliższych miesięcy. Dokładna data zostanie przekazana wszystkim osobom zapisanym na listę oczekujących z odpowiednim wyprzedzeniem.</p>
+                            <ul>
+                                <li>Osoby z listy oczekujących otrzymają dostęp w pierwszej kolejności</li>
+                                <li>Planujemy fazę beta testów dla wybranych użytkowników</li>
+                                <li>Pełne uruchomienie platformy nastąpi po zebraniu opinii od testerów</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Czy darmowy plan treningowy jest ograniczony czasowo?</h3>
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200" id="faq-item-2">
+                        <div class="faq-question" onclick="toggleFaq('faq-item-2')">
+                            <h3><span class="faq-icon"><i class="fas fa-infinity"></i></span> Czy darmowy plan treningowy jest ograniczony czasowo?</h3>
                             <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                         </div>
                         <div class="faq-answer">
                             <p>Nie, darmowy plan treningowy, który otrzymasz jako osoba z listy oczekujących, będzie Twój na zawsze. Będziesz mógł/mogła korzystać z niego bez ograniczeń czasowych.</p>
+                            <ul>
+                                <li>Pełny dostęp do wszystkich funkcji planu</li>
+                                <li>Możliwość pobrania planu w formacie PDF</li>
+                                <li>Brak ukrytych opłat czy ograniczeń czasowych</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Dla kogo przeznaczona jest platforma ZnanyTrener.AI?</h3>
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300" id="faq-item-3">
+                        <div class="faq-question" onclick="toggleFaq('faq-item-3')">
+                            <h3><span class="faq-icon"><i class="fas fa-running"></i></span> Dla kogo przeznaczona jest platforma ZnanyTrener.AI?</h3>
                             <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                         </div>
                         <div class="faq-answer">
-                            <p>ZnanyTrener.AI jest przeznaczony dla biegaczy na różnym poziomie zaawansowania - od początkujących po średniozaawansowanych, w tym osoby powracające po kontuzjach. Nasz system dostosowuje plany treningowe do indywidualnych potrzeb i możliwości każdego biegacza.</p>
+                            <p>ZnanyTrener.AI jest przeznaczony dla biegaczy na różnym poziomie zaawansowania - od początkujących po średniożaawansowanych, w tym osoby powracające po kontuzjach. Nasz system dostosowuje plany treningowe do indywidualnych potrzeb i możliwości każdego biegacza.</p>
+                            <ul>
+                                <li>Początkujący biegacze chcący rozpocząć przygodę z bieganiem</li>
+                                <li>Osoby powracające do aktywności po kontuzjach</li>
+                                <li>Biegacze średniożaawansowani chcący poprawić swoje wyniki</li>
+                                <li>Każdy, kto chce trenować mądrze i bezpiecznie</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Czy będzie możliwość modyfikacji planu treningowego?</h3>
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400" id="faq-item-4">
+                        <div class="faq-question" onclick="toggleFaq('faq-item-4')">
+                            <h3><span class="faq-icon"><i class="fas fa-sliders-h"></i></span> Czy będzie możliwość modyfikacji planu treningowego?</h3>
                             <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                         </div>
                         <div class="faq-answer">
                             <p>Tak, po pełnym uruchomieniu platformy, będziesz mieć możliwość modyfikacji planu treningowego w zależności od Twoich postępów, samopoczucia czy zmiany celów. Nasz system AI będzie się adaptował do Twoich potrzeb.</p>
+                            <ul>
+                                <li>Możliwość dostosowania intensywności treningu</li>
+                                <li>Opcje zmiany dni treningowych w tygodniu</li>
+                                <li>Automatyczne dostosowanie planu do Twoich postępów</li>
+                                <li>Inteligentne sugestie zmian bazujące na Twoich wynikach</li>
+                            </ul>
                         </div>
                     </div>
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="faq-question">
+                            <h3><span class="faq-icon"><i class="fas fa-mobile-alt"></i></span> Czy ZnanyTrener.AI będzie dostępny na urządzeniach mobilnych?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tak, ZnanyTrener.AI będzie w pełni responsywny i dostępny na wszystkich urządzeniach. Planujemy również dedykowaną aplikację mobilną na systemy iOS i Android w późniejszym etapie rozwoju.</p>
+                            <ul>
+                                <li>Pełna funkcjonalność na urządzeniach mobilnych</li>
+                                <li>Możliwość śledzenia treningu w czasie rzeczywistym</li>
+                                <li>Powiadomienia i przypomnienia o treningach</li>
+                                <li>Synchronizacja z popularnymi zegarkami sportowymi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-cta">
+                    <p class="cta-text">Nie znalazłeś odpowiedzi na swoje pytanie?</p>
+                    <a href="#kontakt" class="cta-button primary"><i class="fas fa-envelope"></i> Skontaktuj się z nami</a>
                 </div>
             </div>
         </section>
@@ -900,5 +952,37 @@
     <script src="js/script.js"></script>
     <script src="js/solution-animations.js"></script>
     <script src="js/how-it-works-animations.js"></script>
+    <script src="js/modern-nav.js"></script>
+    <script>
+        // Funkcja do przełączania stanu FAQ
+        function toggleFaq(itemId) {
+            // Pobierz element FAQ
+            const faqItem = document.getElementById(itemId);
+            
+            // Sprawdź, czy element jest już aktywny
+            const isActive = faqItem.classList.contains('active');
+            
+            // Zamknij wszystkie aktywne elementy
+            document.querySelectorAll('.faq-item.active').forEach(item => {
+                if (item.id !== itemId) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Przełącz stan aktywności klikniętego elementu
+            if (isActive) {
+                faqItem.classList.remove('active');
+            } else {
+                faqItem.classList.add('active');
+            }
+        }
+        
+        // Otwórz pierwsze pytanie po załadowaniu strony
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('faq-item-1').classList.add('active');
+            }, 500);
+        });
+    </script>
 </body>
 </html>
