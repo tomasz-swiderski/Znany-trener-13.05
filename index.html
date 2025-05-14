@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="css/solution-styles.css">
     <link rel="stylesheet" href="css/form-styles.css">
     <link rel="stylesheet" href="css/how-it-works-styles.css">
+    <link rel="stylesheet" href="css/how-it-works-enhanced.css">
     <link rel="stylesheet" href="css/pricing-styles.css">
     <link rel="stylesheet" href="css/benefits-styles.css">
+    <link rel="stylesheet" href="css/integration-fixes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -289,65 +291,151 @@
         <!-- Sekcja 3: Jak To Działa -->
         <section id="how-it-works-section" class="how-it-works-section">
             <div class="container">
-                <h2 class="section-title">Jak działa ZnanyTrener.AI?</h2>
+                <div class="how-it-works-header" data-aos="fade-up">
+                    <span class="how-it-works-badge">Prosto i skutecznie</span>
+                    <h2 class="section-title">Jak działa ZnanyTrener.AI?</h2>
+                    <p class="how-it-works-intro">Twój idealny plan treningowy w 3 prostych krokach - szybko, łatwo i bez wysiłku</p>
+                </div>
+                
                 <div class="process-flow">
-                    <div class="process-line"></div>
+                    <div class="process-line animated-line"></div>
                     <div class="steps-container">
-                        <div class="step-card animate-step">
+                        <!-- Krok 1 -->
+                        <div class="step-card animate-step" data-aos="fade-right">
                             <div class="step-header">
                                 <div class="step-number">1</div>
-                                <div class="step-icon pulse-icon">
+                                <div class="step-icon floating-icon">
                                     <i class="fas fa-user-edit"></i>
                                 </div>
                             </div>
                             <div class="step-content">
                                 <h3 class="step-title">Mówisz nam o sobie</h3>
                                 <p class="step-description">Wypełniasz interaktywny kwestionariusz o swoich celach, historii treningowej i ewentualnych kontuzjach.</p>
+                                <div class="step-details">
+                                    <div class="step-detail-item">
+                                        <i class="fas fa-stopwatch"></i>
+                                        <span>Zajmuje tylko <strong>2 minuty</strong></span>
+                                    </div>
+                                    <div class="step-detail-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Twoje dane są <strong>bezpieczne</strong></span>
+                                    </div>
+                                </div>
                                 <div class="step-features">
                                     <span class="feature-tag"><i class="fas fa-check-circle"></i> Szybko</span>
                                     <span class="feature-tag"><i class="fas fa-check-circle"></i> Łatwo</span>
+                                    <span class="feature-tag"><i class="fas fa-check-circle"></i> Intuicyjnie</span>
                                 </div>
+                            </div>
+                            <div class="step-preview">
+                                <img src="images/form-preview.jpg" alt="Przykładowy formularz" class="preview-img" onerror="this.src='https://via.placeholder.com/200x120?text=Formularz'">
                             </div>
                         </div>
                         
-                        <div class="step-card animate-step delay-1">
+                        <!-- Krok 2 -->
+                        <div class="step-card animate-step delay-1" data-aos="fade-right" data-aos-delay="200">
                             <div class="step-header">
                                 <div class="step-number">2</div>
-                                <div class="step-icon pulse-icon">
+                                <div class="step-icon rotating-icon">
                                     <i class="fas fa-brain"></i>
                                 </div>
                             </div>
                             <div class="step-content">
                                 <h3 class="step-title">AI analizuje dane</h3>
                                 <p class="step-description">Nasz zaawansowany algorytm analizuje Twoje dane i tworzy optymalny plan treningowy dostosowany do Twoich możliwości.</p>
+                                <div class="step-details">
+                                    <div class="step-detail-item">
+                                        <i class="fas fa-database"></i>
+                                        <span>Analiza <strong>1000+ czynników</strong></span>
+                                    </div>
+                                    <div class="step-detail-item">
+                                        <i class="fas fa-code-branch"></i>
+                                        <span><strong>Miliony</strong> możliwych kombinacji</span>
+                                    </div>
+                                </div>
                                 <div class="step-features">
                                     <span class="feature-tag"><i class="fas fa-bolt"></i> Błyskawicznie</span>
                                     <span class="feature-tag"><i class="fas fa-chart-line"></i> Precyzyjnie</span>
+                                    <span class="feature-tag"><i class="fas fa-robot"></i> Inteligentnie</span>
+                                </div>
+                            </div>
+                            <div class="step-preview">
+                                <div class="ai-animation">
+                                    <div class="ai-pulse"></div>
+                                    <i class="fas fa-cogs"></i>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="step-card animate-step delay-2">
+                        <!-- Krok 3 -->
+                        <div class="step-card animate-step delay-2" data-aos="fade-right" data-aos-delay="400">
                             <div class="step-header">
                                 <div class="step-number">3</div>
-                                <div class="step-icon pulse-icon">
+                                <div class="step-icon bouncing-icon">
                                     <i class="fas fa-running"></i>
                                 </div>
                             </div>
                             <div class="step-content">
                                 <h3 class="step-title">Otrzymujesz plan</h3>
                                 <p class="step-description">Dostajesz spersonalizowany plan treningowy, który możesz od razu wdrożyć w życie i śledzić swoje postępy.</p>
+                                <div class="step-details">
+                                    <div class="step-detail-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>Szczegółowy plan na <strong>każdy dzień</strong></span>
+                                    </div>
+                                    <div class="step-detail-item">
+                                        <i class="fas fa-medal"></i>
+                                        <span><strong>97% skuteczności</strong> w osiąganiu celów</span>
+                                    </div>
+                                </div>
                                 <div class="step-features">
                                     <span class="feature-tag"><i class="fas fa-mobile-alt"></i> Dostępny mobilnie</span>
                                     <span class="feature-tag"><i class="fas fa-sync-alt"></i> Aktualizowany</span>
+                                    <span class="feature-tag"><i class="fas fa-file-download"></i> Eksport PDF</span>
                                 </div>
+                            </div>
+                            <div class="step-preview">
+                                <img src="images/plan-preview.jpg" alt="Przykładowy plan" class="preview-img" onerror="this.src='https://via.placeholder.com/200x120?text=Plan+treningowy'">
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="process-cta">
-                    <a href="#plany" class="cta-button primary"><i class="fas fa-angle-double-down"></i> Zobacz plany</a>
+                <div class="process-results" data-aos="fade-up">
+                    <h3 class="results-title">Rezultaty, które osiągają nasi użytkownicy:</h3>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <div class="result-value">+24%</div>
+                            <div class="result-label">Poprawa tempa biegu</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-icon"><i class="fas fa-heartbeat"></i></div>
+                            <div class="result-value">-18%</div>
+                            <div class="result-label">Niższe tętno wysiłkowe</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-icon"><i class="fas fa-dumbbell"></i></div>
+                            <div class="result-value">+31%</div>
+                            <div class="result-label">Wzrost wytrzymałości</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-icon"><i class="fas fa-weight"></i></div>
+                            <div class="result-value">-8kg</div>
+                            <div class="result-label">Średnia utrata wagi</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-cta" data-aos="fade-up">
+                    <div class="cta-highlight">
+                        <div class="highlight-badge">Rozpocznij już dziś</div>
+                        <p class="highlight-text">Dołącz do tysięcy zadowolonych biegaczy, którzy osiągają swoje cele z ZnanyTrener.AI</p>
+                    </div>
+                    <a href="#plany" class="cta-button primary animated-button">
+                        <span class="button-text">Wybierz swój plan</span>
+                        <i class="fas fa-angle-double-down"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -667,91 +755,93 @@
         <!-- Sekcja 6: Integracje i Przyszłość -->
         <section id="integrations-section" class="integrations-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge integration-badge">Coming Soon</span>
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <span class="section-badge integration-badge" style="display: inline-block;">Coming Soon</span>
+                </div>
+                <div class="section-header" style="text-align: center;">
                     <h2 class="section-title">Integracje, które zmienią Twój trening</h2>
-                    <p class="section-intro">Połączymy Twoje ulubione platformy do śledzenia aktywności z ZnanyTrener.AI, aby zapewnić jeszcze lepsze doświadczenia treningowe</p>
+                    <p class="section-intro" style="max-width: 700px; margin: 20px auto 0;">Połączymy Twoje ulubione platformy do śledzenia aktywności z ZnanyTrener.AI, aby zapewnić jeszcze lepsze doświadczenia treningowe</p>
                 </div>
                 
-                <div class="watch-integration-showcase">
-                    <div class="watch-container">
-                        <div class="watch-wrapper">
-                            <img src="images/Zegarek.png" alt="Zegarek sportowy" class="watch-image">
+                <div class="watch-integration-showcase" style="margin: 60px 0; display: flex; justify-content: center;">
+                    <div class="watch-container" style="position: relative; width: 400px; height: 400px; display: flex; justify-content: center; align-items: center;">
+                        <div class="watch-wrapper" style="position: relative; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center; z-index: 2;">
+                            <img src="images/Zegarek.png" alt="Zegarek sportowy" class="watch-image" style="width: 100%; height: auto; object-fit: contain;">
                             <div class="watch-overlay"></div>
                         </div>
                         
-                        <div class="logos-static">
-                            <div class="logo-static-item logo-top" data-aos="fade-down" data-aos-delay="100">
-                                <div class="logo-static-wrapper">
-                                    <img src="images/garmin-logo-vector.png" alt="Garmin" class="static-logo">
+                        <div class="logos-static" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            <div class="logo-static-item" style="position: absolute; top: -70px; left: 50%; transform: translateX(-50%); width: 130px; height: 78px;" data-aos="fade-down" data-aos-delay="100">
+                                <div class="logo-static-wrapper" style="background-color: white; border-radius: 12px; padding: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                    <img src="images/garmin-logo-vector.png" alt="Garmin" class="static-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
                                 </div>
                             </div>
-                            <div class="logo-static-item logo-right" data-aos="fade-left" data-aos-delay="200">
-                                <div class="logo-static-wrapper">
-                                    <img src="images/strava-logo-png-4.webp" alt="Strava" class="static-logo">
+                            <div class="logo-static-item" style="position: absolute; top: 50%; right: -70px; transform: translateY(-50%); width: 130px; height: 78px;" data-aos="fade-left" data-aos-delay="200">
+                                <div class="logo-static-wrapper" style="background-color: white; border-radius: 12px; padding: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                    <img src="images/strava-logo-png-4.webp" alt="Strava" class="static-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
                                 </div>
                             </div>
-                            <div class="logo-static-item logo-bottom" data-aos="fade-up" data-aos-delay="300">
-                                <div class="logo-static-wrapper">
-                                    <img src="images/Training-Peaks-Logo.webp" alt="Training Peaks" class="static-logo">
+                            <div class="logo-static-item" style="position: absolute; bottom: -70px; left: 50%; transform: translateX(-50%); width: 130px; height: 78px;" data-aos="fade-up" data-aos-delay="300">
+                                <div class="logo-static-wrapper" style="background-color: white; border-radius: 12px; padding: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                    <img src="images/Training-Peaks-Logo.webp" alt="Training Peaks" class="static-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="integration-features">
-                        <div class="integration-feature" data-aos="fade-left" data-aos-delay="100">
-                            <div class="feature-icon">
+                    <div class="integration-features" style="flex: 1; max-width: 500px; margin-left: 40px;">
+                        <div class="integration-feature" style="display: flex; align-items: flex-start; gap: 20px; background-color: white; border-radius: 10px; padding: 25px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); margin-bottom: 20px;" data-aos="fade-left" data-aos-delay="100">
+                            <div class="feature-icon" style="background: linear-gradient(135deg, #FF5722 0%, #FF9800 100%); width: 50px; height: 50px; min-width: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
                                 <i class="fas fa-sync-alt"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Synchronizacja danych</h4>
-                                <p>Automatyczne pobieranie danych treningowych z Twoich ulubionych platform i urządzeń.</p>
+                                <h4 style="margin-top: 0;">Synchronizacja danych</h4>
+                                <p style="margin-bottom: 0;">Automatyczne pobieranie danych treningowych z Twoich ulubionych platform i urządzeń.</p>
                             </div>
                         </div>
                         
-                        <div class="integration-feature" data-aos="fade-left" data-aos-delay="200">
-                            <div class="feature-icon">
+                        <div class="integration-feature" style="display: flex; align-items: flex-start; gap: 20px; background-color: white; border-radius: 10px; padding: 25px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); margin-bottom: 20px;" data-aos="fade-left" data-aos-delay="200">
+                            <div class="feature-icon" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); width: 50px; height: 50px; min-width: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
                                 <i class="fas fa-chart-line"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Analiza postępów</h4>
-                                <p>Zaawansowana analiza Twoich wyników i dynamiczne dostosowywanie planu treningowego.</p>
+                                <h4 style="margin-top: 0;">Analiza postępów</h4>
+                                <p style="margin-bottom: 0;">Zaawansowana analiza Twoich wyników i dynamiczne dostosowywanie planu treningowego.</p>
                             </div>
                         </div>
                         
-                        <div class="integration-feature" data-aos="fade-left" data-aos-delay="300">
-                            <div class="feature-icon">
+                        <div class="integration-feature" style="display: flex; align-items: flex-start; gap: 20px; background-color: white; border-radius: 10px; padding: 25px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);" data-aos="fade-left" data-aos-delay="300">
+                            <div class="feature-icon" style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); width: 50px; height: 50px; min-width: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <div class="feature-content">
-                                <h4>Dostęp mobilny</h4>
-                                <p>Pełna integracja z aplikacjami mobilnymi, zegarkami i innymi urządzeniami sportowymi.</p>
+                                <h4 style="margin-top: 0;">Dostęp mobilny</h4>
+                                <p style="margin-bottom: 0;">Pełna integracja z aplikacjami mobilnymi, zegarkami i innymi urządzeniami sportowymi.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-section">
-                    <div class="testimonial-card" data-aos="fade-up">
-                        <div class="testimonial-quote">
+                <div class="testimonial-section" style="margin: 60px auto; max-width: 800px; text-align: center;">
+                    <div class="testimonial-card" style="background-color: white; border-radius: 15px; padding: 40px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); position: relative;" data-aos="fade-up">
+                        <div class="testimonial-quote" style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; background: linear-gradient(135deg, #FF5722 0%, #FF9800 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
                             <i class="fas fa-quote-left"></i>
                         </div>
-                        <div class="testimonial-content">
+                        <div class="testimonial-content" style="font-style: italic; font-size: 1.1rem; color: #555; line-height: 1.7; margin-bottom: 30px;">
                             <p>"Jako biegacz z kilkuletnim doświadczeniem, zawsze szukałem sposobu na przełamanie bariery wyników. Nie mogę się doczekać, aby wypróbować ZnanyTrener.AI z integracją z moim Garminem!"</p>
                         </div>
-                        <div class="testimonial-author">
-                            <img src="images/testimonial-author-placeholder.jpg" alt="Autor opinii" class="author-img">
-                            <div class="author-info">
-                                <h4 class="author-name">Jan Kowalski</h4>
-                                <p class="author-description">Biegacz amator, uczestnik maratonów</p>
+                        <div class="testimonial-author" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                            <img src="images/testimonial-author-placeholder.jpg" alt="Autor opinii" class="author-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/60x60?text=Jan'">
+                            <div class="author-info" style="text-align: left;">
+                                <h4 class="author-name" style="margin: 0; font-weight: 600;">Jan Kowalski</h4>
+                                <p class="author-description" style="margin: 0; font-size: 0.9rem; color: #777;">Biegacz amator, uczestnik maratonów</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="integration-cta">
-                    <a href="#zapisz-sie" class="cta-button primary"><i class="fas fa-bell"></i> Powiadom mnie o integracji</a>
+                <div class="integration-cta" style="text-align: center; margin-top: 40px;">
+                    <a href="#zapisz-sie" class="cta-button primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; font-size: 1.1rem; border-radius: 50px;"><i class="fas fa-bell"></i> Powiadom mnie o integracji</a>
                 </div>
             </div>
         </section>
