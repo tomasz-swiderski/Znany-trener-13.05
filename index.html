@@ -21,21 +21,61 @@
     <link rel="stylesheet" href="css/feature-tags-fixes.css">
     <link rel="stylesheet" href="css/social-icons-fixes.css">
     <link rel="stylesheet" href="css/testimonial-fixes.css">
+    <link rel="stylesheet" href="css/modal-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Pop-up Modal dla "Generuj Plan" -->
+    <div id="generuj-plan-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-rocket modal-icon"></i>
+                <h3>Funkcja wkrótce dostępna!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Generator planów treningowych będzie dostępny po oficjalnym uruchomieniu aplikacji ZnanyTrener.AI.</p>
+                <p>Zapisz się na listę oczekujących, aby otrzymać powiadomienie o starcie oraz <strong>darmowy, spersonalizowany plan treningowy!</strong></p>
+                <div class="countdown-container modal-countdown">
+                    <div class="countdown-label">
+                        <i class="fas fa-stopwatch"></i>
+                        <span>Do startu pozostało:</span>
+                    </div>
+                    <div class="countdown-timer-group">
+                        <div class="cd-col">
+                            <span class="cd-box" id="modal-cd-days">00</span>
+                            <span class="cd-label">dni</span>
+                        </div>
+                        <span class="cd-sep">:</span>
+                        <div class="cd-col">
+                            <span class="cd-box" id="modal-cd-hours">00</span>
+                            <span class="cd-label">godzin</span>
+                        </div>
+                        <span class="cd-sep">:</span>
+                        <div class="cd-col">
+                            <span class="cd-box" id="modal-cd-minutes">00</span>
+                            <span class="cd-label">minut</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#zapisz-sie" class="cta-button primary modal-cta">Zapisz się na waitlistę</a>
+            </div>
+        </div>
+    </div>
+
     <header>
         <nav class="main-nav">
             <div class="logo">
                 <a href="#"><img src="images/Logo Znanytrener.png" alt="Logo ZnanyTrener.AI" class="logo-img"></a>
             </div>
             <div class="nav-links desktop-nav">
-                <a href="#generuj-plan" class="nav-link">Generuj Plan</a>
+                <a href="#" class="nav-link generuj-plan-link">Generuj Plan</a>
                 <a href="#zapisz-sie" class="nav-link">Waitlist</a>
-                <a href="#jak-to-dziala" class="nav-link">Jak to działa</a>
                 <a href="#korzysci" class="nav-link">Korzyści</a>
                 <a href="#faq" class="nav-link">FAQ</a>
             </div>
@@ -43,9 +83,8 @@
                 <span class="hamburger-icon"></span>
             </div>
             <div class="mobile-nav">
-                <a href="#generuj-plan">Generuj Plan</a>
+                <a href="#" class="generuj-plan-link">Generuj Plan</a>
                 <a href="#zapisz-sie">Waitlist</a>
-                <a href="#jak-to-dziala">Jak to działa</a>
                 <a href="#korzysci">Korzyści</a>
                 <a href="#faq">FAQ</a>
                 <a href="#zapisz-sie" class="cta-button primary mobile-cta">Zapisz się</a>
@@ -295,120 +334,7 @@
             </div>
         </section>
 
-        <!-- Sekcja 3: Jak To Działa -->
-        <section id="how-it-works-section" class="how-it-works-section">
-            <div class="container">
-                <div class="how-it-works-header" data-aos="fade-up">
-                    <span class="how-it-works-badge">Innowacja w treningu</span>
-                    <h2 class="section-title">Jak działa ZnanyTrener.AI?</h2>
-                    <p class="how-it-works-intro">Odkryj, jak sztuczna inteligencja tworzy Twój idealny plan treningowy w 3 prostych krokach</p>
-                </div>
-                
-                <div class="process-flow">
-                    <div class="process-line animated-line"></div>
-                    <div class="steps-container">
-                        <!-- Krok 1 -->
-                        <div class="step-card animate-step" data-aos="fade-right">
-                            <div class="step-header">
-                                <div class="step-number">1</div>
-                                <div class="step-icon floating-icon">
-                                    <i class="fas fa-clipboard-list"></i>
-                                </div>
-                            </div>
-                            <div class="step-content">
-                                <h3 class="step-title">Twój profil treningowy</h3>
-                                <p class="step-description">Odpowiadasz na kilka pytań o swoich celach, doświadczeniu biegowym i preferencjach treningowych. Im więcej szczegółów podasz, tym lepiej dopasujemy Twój plan.</p>
-                                <div class="step-details">
-                                    <div class="step-detail-item">
-                                        <i class="fas fa-stopwatch"></i>
-                                        <span>Tylko <strong>2 minuty</strong> Twojego czasu</span>
-                                    </div>
-                                    <div class="step-detail-item">
-                                        <i class="fas fa-lock"></i>
-                                        <span><strong>Bezpieczeństwo</strong> danych RODO</span>
-                                    </div>
-                                </div>
-                                <div class="step-features">
-                                    <span class="feature-tag"><i class="fas fa-user-shield"></i> Personalizacja</span>
-                                    <span class="feature-tag"><i class="fas fa-sliders-h"></i> Elastyczność</span>
-                                    <span class="feature-tag"><i class="fas fa-history"></i> Oszczędność czasu</span>
-                                </div>
-                            </div>
-                            <div class="step-preview">
-                                <img src="images/form-preview.jpg" alt="Przykładowy formularz" class="preview-img" onerror="this.src='images/placeholders/formularz.svg'">
-                            </div>
-                        </div>
-                        
-                        <!-- Krok 2 -->
-                        <div class="step-card animate-step delay-1" data-aos="fade-right" data-aos-delay="200">
-                            <div class="step-header">
-                                <div class="step-number">2</div>
-                                <div class="step-icon rotating-icon">
-                                    <i class="fas fa-microchip"></i>
-                                </div>
-                            </div>
-                            <div class="step-content">
-                                <h3 class="step-title">Magia sztucznej inteligencji</h3>
-                                <p class="step-description">Nasz zaawansowany system AI analizuje Twoje dane i porównuje je z tysiącami planów treningowych opracowanych przez ekspertów, aby stworzyć idealnie dopasowany program.</p>
-                                <div class="step-details">
-                                    <div class="step-detail-item">
-                                        <i class="fas fa-dna"></i>
-                                        <span>Analiza <strong>ponad 200 zmiennych</strong></span>
-                                    </div>
-                                    <div class="step-detail-item">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>Wiedza <strong>najlepszych trenerów</strong></span>
-                                    </div>
-                                </div>
-                                <div class="step-features">
-                                    <span class="feature-tag"><i class="fas fa-tachometer-alt"></i> Błyskawiczna analiza</span>
-                                    <span class="feature-tag"><i class="fas fa-bullseye"></i> Precyzyjne dopasowanie</span>
-                                    <span class="feature-tag"><i class="fas fa-brain"></i> Uczenie maszynowe</span>
-                                </div>
-                            </div>
-                            <div class="step-preview">
-                                <div class="ai-animation">
-                                    <div class="ai-pulse"></div>
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Krok 3 -->
-                        <div class="step-card animate-step delay-2" data-aos="fade-right" data-aos-delay="400">
-                            <div class="step-header">
-                                <div class="step-number">3</div>
-                                <div class="step-icon bouncing-icon">
-                                    <i class="fas fa-rocket"></i>
-                                </div>
-                            </div>
-                            <div class="step-content">
-                                <h3 class="step-title">Twój plan gotowy do działania</h3>
-                                <p class="step-description">Otrzymujesz kompleksowy plan treningowy dostosowany do Twoich możliwości, który ewoluuje wraz z Twoimi postępami i automatycznie dostosowuje się do zmian w Twoim harmonogramie.</p>
-                                <div class="step-details">
-                                    <div class="step-detail-item">
-                                        <i class="fas fa-calendar-check"></i>
-                                        <span><strong>Codzienny harmonogram</strong> treningów</span>
-                                    </div>
-                                    <div class="step-detail-item">
-                                        <i class="fas fa-chart-line"></i>
-                                        <span><strong>Adaptacja</strong> do Twoich postępów</span>
-                                    </div>
-                                </div>
-                                <div class="step-features">
-                                    <span class="feature-tag"><i class="fas fa-mobile-alt"></i> Aplikacja mobilna</span>
-                                    <span class="feature-tag"><i class="fas fa-sync"></i> Ciągłe aktualizacje</span>
-                                    <span class="feature-tag"><i class="fas fa-heartbeat"></i> Monitoring zdrowia</span>
-                                </div>
-                            </div>
-                            <div class="step-preview">
-                                <img src="images/plan-preview.jpg" alt="Przykładowy plan" class="preview-img" onerror="this.src='images/placeholders/plan-treningowy.svg'">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         
         <!-- Sekcja: Oferta Specjalna -->
         <section id="special-offer" class="special-offer-section">
@@ -923,6 +849,7 @@
     <script src="js/how-it-works-animations.js"></script>
     <script src="js/modern-nav.js"></script>
     <script src="js/modern-faq.js"></script>
+    <script src="js/modal.js"></script>
     <script>
         // Funkcja do przełączania stanu FAQ
         function toggleFaq(itemId) {
@@ -951,7 +878,7 @@
         // document.addEventListener('DOMContentLoaded', function() {
         //     setTimeout(function() {
         //         document.getElementById('faq-item-1').classList.add('active');
-        //     }, 500);
+        //     }, 1000);
         // });
     </script>
 </body>

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileNav = document.querySelector('.mobile-nav');
     const navLinks = document.querySelectorAll('.nav-link');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
     
     // Funkcja do obsługi efektu przewijania
     function handleScroll() {
@@ -15,11 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Funkcja do przełączania menu mobilnego
-    function toggleMobileMenu() {
+    function toggleMobileMenu(e) {
+        e.preventDefault();
         mobileMenuToggle.classList.toggle('active');
         mobileNav.classList.toggle('active');
         document.body.classList.toggle('menu-open');
-        mobileMenuToggle.setAttribute('aria-expanded', mobileNav.classList.contains('active'));
+        
+        // Aktualizacja atrybutu aria-expanded dla dostępności
+        const isExpanded = mobileNav.classList.contains('active');
+        mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+        
+        // Zapobieganie przewijaniu strony gdy menu jest otwarte
+        if (isExpanded) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     }
     
     // Funkcja do zamykania menu mobilnego po kliknięciu w link
@@ -27,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuToggle.classList.remove('active');
         mobileNav.classList.remove('active');
         document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
     }
     
     // Funkcja do ustawiania aktywnego linku
@@ -45,9 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         navLinks.forEach(link => {
             link.classList.remove('active');
-            const href = link.getAttribute('href').substring(1);
-            
-            if (href === currentSection) {
+            const href = link.getAttribute('href');
+            if (href && href.substring(1) === currentSection) {
                 link.classList.add('active');
             }
         });
@@ -60,13 +73,22 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuToggle.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            toggleMobileMenu();
+            toggleMobileMenu(e);
         }
     });
     
     // Zamykanie menu mobilnego po kliknięciu w link
     document.querySelectorAll('.mobile-nav a').forEach(link => {
         link.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Zamykanie menu po kliknięciu poza menu
+    document.addEventListener('click', function(e) {
+        if (mobileNav.classList.contains('active') && 
+            !mobileNav.contains(e.target) && 
+            !mobileMenuToggle.contains(e.target)) {
+            closeMobileMenu();
+        }
     });
     
     // Inicjalizacja stanu początkowego
