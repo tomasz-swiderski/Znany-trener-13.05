@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuToggle.classList.toggle('active');
         mobileNav.classList.toggle('active');
         document.body.classList.toggle('menu-open');
+        mobileMenuToggle.setAttribute('aria-expanded', mobileNav.classList.contains('active'));
     }
     
     // Funkcja do zamykania menu mobilnego po kliknięciu w link
@@ -56,6 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('scroll', setActiveLink);
     mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    mobileMenuToggle.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMobileMenu();
+        }
+    });
     
     // Zamykanie menu mobilnego po kliknięciu w link
     document.querySelectorAll('.mobile-nav a').forEach(link => {

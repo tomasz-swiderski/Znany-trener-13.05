@@ -34,7 +34,7 @@
                 <a href="#korzysci" class="nav-link">Korzyści</a>
                 <a href="#faq" class="nav-link">FAQ</a>
             </div>
-            <div class="mobile-menu-toggle">
+            <div class="mobile-menu-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="mobile-nav">
                 <span class="hamburger-icon"></span>
             </div>
             <div class="mobile-nav">
@@ -54,13 +54,13 @@
     <div class="hero-bg">
         <picture>
             <source srcset="images/hero.png" media="(min-width: 769px)">
-            <!-- <source srcset="images/hero-mobile.png" media="(max-width: 768px)"> -->
-            <img src="images/hero.png" alt="Biegacz z ZnanyTrener.AI" class="hero-bg-img">
+            <source srcset="images/hero-mobile.png" media="(max-width: 768px)">
+            <img src="images/hero.png" alt="Biegacz z ZnanyTrener.AI" class="hero-bg-img" loading="lazy">
         </picture>
         <div class="hero-bg-mask"></div>
     </div>
     <div class="container">
-        <div class="hero-box">
+        <div class="hero-box hero-content-wrapper hero-flex-row">
             <div class="hero-badge">Premiera wkrótce</div>
             
             <div class="hero-content">
@@ -330,7 +330,7 @@
                                 </div>
                             </div>
                             <div class="step-preview">
-                                <img src="images/form-preview.jpg" alt="Przykładowy formularz" class="preview-img" onerror="this.src='https://via.placeholder.com/200x120?text=Formularz'">
+                                <img src="images/form-preview.jpg" alt="Przykładowy formularz" class="preview-img" onerror="this.src='images/placeholders/formularz.svg'">
                             </div>
                         </div>
                         
@@ -397,7 +397,7 @@
                                 </div>
                             </div>
                             <div class="step-preview">
-                                <img src="images/plan-preview.jpg" alt="Przykładowy plan" class="preview-img" onerror="this.src='https://via.placeholder.com/200x120?text=Plan+treningowy'">
+                                <img src="images/plan-preview.jpg" alt="Przykładowy plan" class="preview-img" onerror="this.src='images/placeholders/plan-treningowy.svg'">
                             </div>
                         </div>
                     </div>
@@ -561,7 +561,7 @@
                             <p>ZnanyTrener.AI całkowicie zmienił moje podejście do biegania. W 3 miesiące przygotowałem się do półmaratonu, mimo wcześniejszej kontuzji kolana!</p>
                             <div class="testimonial-author">
                                 <div class="author-avatar">
-                                    <img src="images/testimonial-1.jpg" alt="Zadowolony użytkownik" onerror="this.src='https://via.placeholder.com/50';">
+                                    <img src="images/testimonial-1.jpg" alt="Zadowolony użytkownik" onerror="this.src='images/placeholders/user-50.svg';">
                                 </div>
                                 <div class="author-info">
                                     <span class="author-name">Marek K.</span>
@@ -796,7 +796,7 @@
                             <p>"Jako biegacz z kilkuletnim doświadczeniem, zawsze szukałem sposobu na przełamanie bariery wyników. Nie mogę się doczekać, aby wypróbować ZnanyTrener.AI z integracją z moim Garminem!"</p>
                         </div>
                         <div class="testimonial-author" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-                            <img src="images/testimonial-author-placeholder.jpg" alt="Autor opinii" class="author-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/60x60?text=Jan'">
+                            <img src="images/testimonial-author-placeholder.jpg" alt="Autor opinii" class="author-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" onerror="this.src='images/placeholders/user-60.svg'">
                             <div class="author-info" style="text-align: left;">
                                 <h4 class="author-name" style="margin: 0; font-weight: 600;">Jan Kowalski</h4>
                                 <p class="author-description" style="margin: 0; font-size: 0.9rem; color: #777;">Biegacz amator, uczestnik maratonów</p>
@@ -953,6 +953,7 @@
     <script src="js/solution-animations.js"></script>
     <script src="js/how-it-works-animations.js"></script>
     <script src="js/modern-nav.js"></script>
+    <script src="js/modern-faq.js"></script>
     <script>
         // Funkcja do przełączania stanu FAQ
         function toggleFaq(itemId) {

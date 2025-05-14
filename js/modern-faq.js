@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const faqQuestions = document.querySelectorAll('.faq-question');
     const faqToggles = document.querySelectorAll('.faq-toggle');
     
-    // Funkcja do przełączania stanu FAQ
-    function toggleFaq(faqItem) {
+    // Funkcja do przełączania stanu FAQ dla elementów DOM (używana wewnątrz tego pliku)
+    function toggleFaqElement(faqItem) {
         const isActive = faqItem.classList.contains('active');
         
         // Zamknij wszystkie otwarte pytania
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Znajdź rodzica (element faq-item)
             const faqItem = this.parentElement;
-            toggleFaq(faqItem);
+            toggleFaqElement(faqItem);
         });
     });
     
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     faqToggles.forEach(toggle => {
         toggle.addEventListener('click', function() {
             const faqItem = this.closest('.faq-item');
-            toggleFaq(faqItem);
+            toggleFaqElement(faqItem);
         });
     });
     

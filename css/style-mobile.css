@@ -107,7 +107,8 @@
         max-width: 100vw !important;
     }
     .hero-content-wrapper {
-        position: static;
+        position: relative;
+        z-index: 5;
         display: flex;
         flex-direction: column;
         align-items: stretch;
@@ -125,7 +126,7 @@
         width: 100vw;
         max-width: 100vw;
     }
-    .hero-content, .signup-form-container {
+    .hero-content, .signup-box {
         max-width: 95vw;
         width: 100%;
         margin: 0 auto;
@@ -133,21 +134,66 @@
         box-shadow: var(--box-shadow);
         padding: 24px 10px 18px 10px;
     }
+    .hero-content {
+        background: rgba(255, 255, 255, 0.95);
+        position: relative;
+        z-index: 5;
+    }
     .hero-title {
         font-size: 2.2rem;
+        color: var(--dark-color);
+        -webkit-text-fill-color: var(--dark-color);
+        text-shadow: none;
+        background: none;
     }
     .hero-subtitle {
         font-size: 1.1rem;
+        color: #444;
     }
-    .signup-form-container {
+    .signup-box {
         margin-top: 0;
         padding: 20px 10px 15px 10px;
     }
+    .countdown-container {
+        background: #fff;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin-top: 15px;
+        position: relative;
+        z-index: 5;
+    }
+    .countdown-label {
+        color: var(--dark-color);
+    }
+    .countdown-label i, .countdown-label span {
+        color: var(--dark-color);
+    }
+    .cd-box {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        color: white;
+        padding: 8px;
+        border-radius: 8px;
+        display: inline-block;
+        min-width: 40px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .cd-label {
+        color: var(--dark-color);
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
 
     /* === Problem & Solution Section === */
-    .problems-grid {
+    .challenges-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .solution-showcase {
+        flex-direction: column;
+        gap: 30px;
     }
     
     .solution-content {
@@ -159,6 +205,17 @@
         margin-bottom: 30px;
     }
     
+    /* Hide decorative line under challenges */
+    .challenges-container::after {
+        display: none;
+    }
+
+    /* Full-width solution segments */
+    .solution-visual,
+    .solution-details {
+        width: 100%;
+    }
+    
     /* === How It Works Section === */
     .steps-container {
         flex-direction: column;
@@ -167,6 +224,17 @@
     
     .step-card {
         max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .process-line {
+        display: none;
+    }
+    
+    .step-preview {
+        order: -1;
+        margin-bottom: 20px;
     }
     
     .early-access-info {
@@ -178,11 +246,50 @@
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    .benefit-card {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+    .benefit-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .benefit-title,
+    .benefit-description,
+    .benefit-stats,
+    .benefit-features {
+        text-align: center;
+    }
     
     /* === Trust/Future Section === */
     .integration-logos {
         flex-direction: column;
         gap: 30px;
+    }
+    
+    /* === Pricing Section === */
+    .pricing-section::before,
+    .pricing-section::after {
+        display: none;
+    }
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .pricing-card {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+    .pricing-header {
+        text-align: center;
+    }
+    .pricing-action {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
     
     /* === Footer === */
