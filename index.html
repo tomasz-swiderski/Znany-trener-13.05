@@ -31,6 +31,209 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* AI Logos Container Styling */
+        .ai-logos-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin: 30px 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(0, 162, 255, 0.5);
+        }
+        
+        #aiLogosCanvas {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Style dla logo AI */
+        .ai-logo {
+            position: absolute;
+            width: 90px; /* Powiększone o 50% z 60px */
+            height: 90px; /* Powiększone o 50% z 60px */
+            filter: drop-shadow(0 0 10px rgba(0, 162, 255, 0.8));
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            z-index: 10;
+        }
+        
+        .ai-logo:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Pozycje początkowe dla logo */
+        .ai-logo:nth-child(1) { 
+            top: 30%; 
+            left: 20%; 
+        }
+        
+        .ai-logo:nth-child(2) { 
+            top: 20%; 
+            left: 40%; 
+        }
+        
+        .ai-logo:nth-child(3) { 
+            top: 60%; 
+            left: 60%; 
+        }
+        
+        .ai-logo:nth-child(4) { 
+            top: 40%; 
+            left: 80%; 
+        }
+        
+        .ai-logo:nth-child(5) { 
+            top: 70%; 
+            left: 30%; 
+        }
+        
+        /* Różne ścieżki animacji dla każdego logo */
+        @keyframes float-1 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(15px, -15px); }
+            50% { transform: translate(25px, 5px); }
+            75% { transform: translate(10px, 20px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        @keyframes float-2 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-10px, 15px); }
+            50% { transform: translate(-20px, -5px); }
+            75% { transform: translate(-5px, -15px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        @keyframes float-3 {
+            0% { transform: translate(0, 0); }
+            30% { transform: translate(15px, 10px); }
+            60% { transform: translate(-15px, 15px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        @keyframes float-4 {
+            0% { transform: translate(0, 0); }
+            33% { transform: translate(-10px, -10px); }
+            66% { transform: translate(10px, 10px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        @keyframes float-5 {
+            0% { transform: translate(0, 0); }
+            20% { transform: translate(15px, 0); }
+            40% { transform: translate(10px, -15px); }
+            60% { transform: translate(-5px, -10px); }
+            80% { transform: translate(-15px, 5px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        .float-1 { animation: float-1 10s infinite ease-in-out; }
+        .float-2 { animation: float-2 12s infinite ease-in-out; }
+        .float-3 { animation: float-3 9s infinite ease-in-out; }
+        .float-4 { animation: float-4 11s infinite ease-in-out; }
+        .float-5 { animation: float-5 14s infinite ease-in-out; }
+        
+        /* Style dla efektów wyładowań elektrycznych */
+        .active-lightning {
+            position: absolute;
+            height: 4px;
+            background: linear-gradient(to right, rgba(0, 204, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(0, 204, 255, 0.9));
+            box-shadow: 0 0 10px 2px #00ccff, 0 0 20px 5px rgba(0, 204, 255, 0.5);
+            animation: lightning-pulse 1s ease-out;
+            z-index: 5;
+            border-radius: 2px;
+            opacity: 0.9;
+        }
+        
+        .discharge-flash {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(0, 204, 255, 0.7) 50%, rgba(0, 204, 255, 0) 80%);
+            border-radius: 50%;
+            animation: flash 1s ease-out;
+            z-index: 6;
+        }
+        
+        .lightning {
+            display: none; /* Ukrywamy stare elementy */
+        }
+        
+        .connector {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #00ccff;
+            box-shadow: 
+                0 0 10px 2px rgba(255, 255, 255, 0.8),
+                0 0 20px 5px rgba(0, 204, 255, 0.9),
+                0 0 30px 10px rgba(0, 204, 255, 0.5);
+            z-index: 15;
+        }
+        
+        .pulse {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #00ccff;
+            opacity: 0;
+            box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+            z-index: 14;
+        }
+        
+        /* Efekt strumienia łączący z sekcją poniżej */
+        .ai-logos-container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 50px;
+            background: linear-gradient(to bottom, rgba(0, 204, 255, 0.9), rgba(0, 204, 255, 0));
+            box-shadow: 0 0 10px 2px rgba(0, 204, 255, 0.5);
+            z-index: 3;
+        }
+        
+        @keyframes lightning-pulse {
+            0% { opacity: 0; height: 2px; }
+            10% { opacity: 1; height: 4px; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        @keyframes flash {
+            0% { transform: scale(0.5); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+        
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+            100% { transform: translateX(-50%) scale(2.5); opacity: 0; }
+        }
+        
+        @keyframes connector-glow {
+            0%, 100% { box-shadow: 0 0 10px 3px rgba(0, 204, 255, 0.8); }
+            50% { box-shadow: 0 0 20px 6px rgba(0, 204, 255, 1); }
+        }
+        
+        .connector {
+            animation: connector-glow 2s infinite alternate;
+        }
+    </style>
 </head>
 <body>
     <!-- Pop-up Modal dla "Generuj Plan" -->
@@ -583,6 +786,27 @@
                     <div class="ai-generation-details">
                         <h2 class="ai-details-title">Co tworzy Twój idealny plan treningowy?</h2>
                         
+                        <!-- AI Logos Floating Container -->
+                        <div class="ai-logos-container">
+                            <!-- Logo AI - statyczne elementy -->
+                            <img src="images/1.png" alt="Claude AI" class="ai-logo" id="claude-logo">
+                            <img src="images/2.png" alt="ChatGPT" class="ai-logo" id="chatgpt-logo">
+                            <img src="images/3.png" alt="Gemini" class="ai-logo" id="gemini-logo">
+                            <img src="images/4.png" alt="Grok" class="ai-logo" id="grok-logo">
+                            <img src="images/5.png" alt="DeepSeek" class="ai-logo" id="deepseek-logo">
+                            
+                            <!-- Efekty wyładowań elektrycznych -->
+                            <div class="lightning" id="lightning1"></div>
+                            <div class="lightning" id="lightning2"></div>
+                            <div class="lightning" id="lightning3"></div>
+                            <div class="lightning" id="lightning4"></div>
+                            <div class="lightning" id="lightning5"></div>
+                            
+                            <!-- Punkt połączenia -->
+                            <div class="connector"></div>
+                            <div class="pulse"></div>
+                        </div>
+                        
                         <div class="ai-steps-grid">
                             <div class="ai-feature-card">
                                 <div class="ai-feature-header">
@@ -1104,5 +1328,14 @@
     </script>
     <!-- Skrypt wizualizacji procesu AI -->
     <script src="js/ai-process-visualization.js"></script>
+    <script src="js/ai-logos-animation.js"></script>
+    <!-- Stary kod animacji został przeniesiony do pliku ai-logos-animation.js -->
+            
+
+            
+
+
+
+    </script>
 </body>
 </html>
